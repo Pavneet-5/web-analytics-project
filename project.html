@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PharmaCare | Interactive Pharma Website</title>
+ 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+ 
+    body {
+      background-color: #f2f6fa;
+      color: #333;
+      line-height: 1.6;
+    }
+ 
+    header {
+      background: #0a6ebd;
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+ 
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+ 
+    header h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+ 
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+ 
+    nav ul li {
+      margin: 5px 15px;
+    }
+ 
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+ 
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+ 
+    section {
+      padding: 50px 0;
+      border-bottom: 1px solid #ddd;
+    }
+ 
+    section h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #0a6ebd;
+    }
+ 
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+ 
+    /* Videos */
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+ 
+    iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 8px;
+    }
+ 
+    /* Quiz */
+    .quiz-box {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+ 
+    .question {
+      margin-bottom: 20px;
+    }
+ 
+    .question p {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+ 
+    .quiz-box label {
+      display: block;
+      margin-bottom: 5px;
+    }
+ 
+    .quiz-box button {
+      padding: 10px 20px;
+      background: #0a6ebd;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+ 
+    .result {
+      margin-top: 15px;
+      font-weight: bold;
+      color: green;
+    }
+ 
+    /* Form */
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+ 
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+ 
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+ 
+    form button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      background: #0a6ebd;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+ 
+    /* Links */
+    .links ul {
+      list-style: none;
+      text-align: center;
+    }
+ 
+    .links li {
+      margin: 10px 0;
+    }
+ 
+    .links a {
+      color: #0a6ebd;
+      font-weight: bold;
+      text-decoration: none;
+    }
+ 
+    footer {
+      background: #0a6ebd;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+  </style>
+</head>
+<body>
+ 
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>PharmaCare</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#links">Links</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ 
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About PharmaCare</h2>
+      <p>
+        PharmaCare provides trusted pharmaceutical knowledge, healthcare awareness,
+        and medical education to help people make informed health decisions.
+      </p>
+    </div>
+  </section>
+ 
+  <!-- Videos -->
+  <section id="videos">
+    <div class="container">
+      <h2>Educational Videos</h2>
+      <div class="videos">
+        <iframe src="https://www.youtube.com/embed/8mve0MZ7P2Y" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/9h5YwH1O9Xk" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Quiz -->
+  <section id="quiz">
+    <div class="container">
+      <h2>Health Awareness Quiz</h2>
+      <div class="quiz-box">
+ 
+        <div class="question">
+          <p>1. Which vitamin supports bone health?</p>
+          <label><input type="radio" name="q1" value="0"> Vitamin A</label>
+          <label><input type="radio" name="q1" value="0"> Vitamin C</label>
+          <label><input type="radio" name="q1" value="1"> Vitamin D</label>
+          <label><input type="radio" name="q1" value="0"> Vitamin B12</label>
+        </div>
+ 
+        <div class="question">
+          <p>2. Antibiotics are used to treat?</p>
+          <label><input type="radio" name="q2" value="1"> Bacterial infections</label>
+          <label><input type="radio" name="q2" value="0"> Viral infections</label>
+          <label><input type="radio" name="q2" value="0"> Allergies</label>
+          <label><input type="radio" name="q2" value="0"> Pain only</label>
+        </div>
+ 
+        <div class="question">
+          <p>3. Which organ metabolizes most drugs?</p>
+          <label><input type="radio" name="q3" value="0"> Heart</label>
+          <label><input type="radio" name="q3" value="1"> Liver</label>
+          <label><input type="radio" name="q3" value="0"> Lungs</label>
+          <label><input type="radio" name="q3" value="0"> Kidney</label>
+        </div>
+ 
+        <div class="question">
+          <p>4. Overuse of antibiotics can cause?</p>
+          <label><input type="radio" name="q4" value="0"> Faster recovery</label>
+          <label><input type="radio" name="q4" value="1"> Antibiotic resistance</label>
+          <label><input type="radio" name="q4" value="0"> Better immunity</label>
+          <label><input type="radio" name="q4" value="0"> No effect</label>
+        </div>
+ 
+        <button onclick="submitQuiz()">Submit Quiz</button>
+        <div id="quizResult" class="result"></div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Contact Form -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form onsubmit="submitForm(event)">
+        <label>Name</label>
+        <input type="text" required>
+ 
+        <label>Email</label>
+        <input type="email" required>
+ 
+        <label>Message</label>
+        <textarea rows="4" required></textarea>
+ 
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+ 
+  <!-- Links -->
+  <section id="links" class="links">
+    <div class="container">
+      <h2>Useful External Links</h2>
+      <ul>
+        <li><a href="https://www.who.int" target="_blank">World Health Organization</a></li>
+        <li><a href="https://www.cdc.gov" target="_blank">Centers for Disease Control</a></li>
+        <li><a href="https://www.fda.gov" target="_blank">US FDA</a></li>
+        <li><a href="https://www.mohfw.gov.in" target="_blank">Ministry of Health – India</a></li>
+      </ul>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PharmaCare. All Rights Reserved.</p>
+    <p>Email: info@pharmacare.com | Phone: +91 98765 43210</p>
+  </footer>
+ 
+  <!-- JavaScript -->
+  <script>
+    function submitQuiz() {
+      const questions = ['q1','q2','q3','q4'];
+      let score = 0;
+      let feedback = '';
+ 
+      questions.forEach((q, index) => {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (!selected) {
+          feedback += `Question ${index + 1}: ❌ Not answered
+`;
+        } else if (selected.value === '1') {
+          score++;
+          feedback += `Question ${index + 1}: ✅ Correct
+`;
+        } else {
+          feedback += `Question ${index + 1}: ❌ Incorrect
+`;
+        }
+      });
+ 
+      document.getElementById('quizResult').innerText =
+        `${feedback}
+Final Score: ${score} out of 4`;
+    }
+ 
+    function submitForm(event) {
+      event.preventDefault();
+      alert('Thank you! Your message has been submitted successfully.');
+      event.target.reset();
+    }
+  </script>
+ 
+</body>
+</html>
